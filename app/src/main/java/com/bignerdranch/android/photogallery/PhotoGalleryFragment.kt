@@ -139,11 +139,11 @@ class PhotoGalleryFragment : Fragment() {
         : RecyclerView.ViewHolder(photoItemView)
     {
             val m_imageView: ImageView
-            val m_titleView: TextView
+            val m_secretView: TextView
 
             init {
                 m_imageView = photoItemView.findViewById(R.id.photo_image)
-                m_titleView = photoItemView.findViewById(R.id.photo_text)
+                m_secretView = photoItemView.findViewById(R.id.photo_text)
             }
 
         //val m_bindDrawable: (Drawable) -> Unit = itemImageView::setImageDrawable
@@ -173,7 +173,7 @@ class PhotoGalleryFragment : Fragment() {
 
             //holder.m_bindDrawable(placeholder)
             holder.m_imageView.setImageDrawable(placeholder)
-            holder.m_titleView.setText(galleryItem.title)
+            holder.m_secretView.setText(galleryItem.secret)
 
             m_thumbnailDownloader.queueThumbnail(holder, galleryItem.url)
         }
